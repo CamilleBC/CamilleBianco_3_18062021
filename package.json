@@ -1,0 +1,19 @@
+{
+  "name": "camillebianco_3_18062021",
+  "version": "1.0.0",
+  "description": "Sass Projet 2 OMF",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/pageSassOMF.scss:./Css/pageCssOMF.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamilleBC/CamilleBianco_3_18062021.git"
+  },
+  "author": "Camille BIANCO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamilleBC/CamilleBianco_3_18062021/issues"
+  },
+  "homepage": "https://github.com/CamilleBC/CamilleBianco_3_18062021#readme"
+}
