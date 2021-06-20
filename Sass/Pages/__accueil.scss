@@ -1,0 +1,69 @@
+.accueil-header {
+    height: map-get($height, header );
+    padding: map-get($padding, general);
+}
+.header-top {
+    @include alignement(row);
+    justify-content: space-between;
+    padding-bottom: map-get($padding, general);
+    &__saisie {
+        @include alignement(row);
+        justify-content: center;
+        background-color: $color-saisie;
+        width: 30%;
+        &__label {
+            line-height: 2rem;
+            padding: 0 0.5rem 0  0.5rem;
+        }
+       &__input {
+           background-color: $color-saisie;
+           border: none;
+       }
+    }
+}
+.header-bottom {
+    @include alignement(column);
+    justify-content: center ;
+    background-color: $background-color;
+    padding-bottom: map-get($padding, general );
+    &__accroche {
+     text-align: center;
+    }
+}
+
+.accueil-nav {
+  @include alignement(row);
+  justify-content: space-around;
+  height: map-get($height, nav );
+  &__titre {
+      font-weight: bolder;
+  }
+  &__lien {
+    @include alignement(row);
+    @include shadow;
+    height: 4rem;
+    line-height: 2rem;
+    background-color: $background-color;
+    border-radius: 1rem;
+    &__chiffre {
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        margin: auto;
+        text-align: center;
+        color:$color-text;
+        background-color: $color-primary;
+        position: relative;
+        right: 0.75rem;
+    }
+    &__description {
+        box-sizing: border-box;
+        padding: 0 3rem 0 0.5rem;
+        > i {
+            padding-right: 1rem;
+            opacity: 0.5;
+        }
+    }
+  }
+}
