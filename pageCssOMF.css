@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../../Font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto bold";
+  src: url(../../Font/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../../Font/Shrikhand-Regular.otf);
+}
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto bold";
+}
+
+.footer__titre {
+  font-family: "Shrikhand";
+}
+
+.btn {
+  height: 2.5rem;
+  width: 12rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5rem;
+  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  margin: auto;
+  box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
+}
+
+.accueil-header {
+  height: 250px;
+  padding: 1rem;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.header-top__saisie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #eaeaea;
+  width: 30%;
+}
+.header-top__saisie__label {
+  line-height: 2rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.header-top__saisie__input {
+  background-color: #eaeaea;
+  border: none;
+}
+
+.header-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding-bottom: 1rem;
+}
+.header-bottom__accroche {
+  text-align: center;
+}
+
+.accueil-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+}
+.accueil-nav__titre {
+  font-weight: bolder;
+}
+.accueil-nav__lien {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
+  height: 4rem;
+  line-height: 2rem;
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+}
+.accueil-nav__lien__chiffre {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: #9356DC;
+  position: relative;
+  right: 0.75rem;
+}
+.accueil-nav__lien__description {
+  box-sizing: border-box;
+  padding: 0 3rem 0 0.5rem;
+}
+.accueil-nav__lien__description > i {
+  padding-right: 1rem;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=pageCssOMF.css.map */
