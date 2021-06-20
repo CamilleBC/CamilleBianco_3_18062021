@@ -1,11 +1,10 @@
 .accueil-header {
     height: map-get($height, header );
-    padding: map-get($padding, general);
 }
 .header-top {
     @include alignement(row);
     justify-content: space-between;
-    padding-bottom: map-get($padding, general);
+    padding: map-get($padding, general);
     &__saisie {
         @include alignement(row);
         justify-content: center;
@@ -33,8 +32,9 @@
 
 .accueil-nav {
   @include alignement(row);
-  justify-content: space-around;
+  justify-content: space-between;
   height: map-get($height, nav );
+  padding: map-get($padding, general );
   &__titre {
       font-weight: bolder;
   }
@@ -66,4 +66,13 @@
         }
     }
   }
+}
+.accueil-section {
+    background-color: $background-color;
+    padding: map-get($padding, general );
+    height: 320px;
+    &__cartes{
+        @include alignement(row);
+        justify-content: space-around;
+    }
 }
