@@ -4,7 +4,7 @@
   "description": "Sass Projet 2 OMF",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./Sass/pageSassOMF.scss:./Css/pageCssOMF.css"
+    "sass": "sass --watch ./Sass/pageSassOMF.scss:./pageCssOMF.css"
   },
   "repository": {
     "type": "git",
