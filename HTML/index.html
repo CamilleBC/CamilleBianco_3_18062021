@@ -10,26 +10,33 @@
     <body>
         <header class="accueil-header">
 
-            <div class="accueil-logo">
-                <img src="../images/logo/ohmyfood@2x.svg" alt="logo Oh My Food" class="accueil-logo_image">
+            <div class="header-top">
+
+            <div class="header-top__logo">
+                <img src="../images/logo/ohmyfood@2x.svg" alt="logo Oh My Food" class="header-top__logo__image">
             </div>
 
-            <form action="post" class="accueil-saisie">
-                <label for="coordonnés" class="accueil-saisie__label"></label>
-                <input type="text" name="coordonnés" placeholder="Paris, Belleville" id="coordonnés" class="accueil-saisie__input">
+            <form action="post" class="header-top__saisie">
+                <label for="coordonnés" class="header-top__saisie__label"><i class="fas fa-map-marker-alt"></i></label>
+                <input type="text" name="coordonnés" placeholder="Paris, Belleville" id="coordonnés" class="header-top__saisie__input">
             </form>
 
-            <div class="accueil-accroche">
-                <h1 class="accueil-accroche__titre">
+            </div>
+
+            <div class="header-bottom">
+
+            <div class="header-bottom__accroche">
+                <h1 class="header-bottom__accroche__titre">
                     Réservez le menu qui vous convient
                 </h1>
-                <p class="accueil-accroche__phrase">
+                <p class="header-bottom__accroche__phrase">
                     Découvrez des restaurants d'exception, sélectionnés par nos soins.
                 </p>
             </div>
 
             <button class="btn">Explorer nos restaurants</button>
 
+        </div>
         </header>
 
         <nav class="accueil-nav">
@@ -38,17 +45,17 @@
             </h2>
 
             <a href="#ancreRestaurant" class="accueil-nav__lien">
-                <div class="accueil-nav__lien__chiffre">1</div>
+                <p class="accueil-nav__lien__chiffre">1</p>
                 <p class="accueil-nav__lien__description"> <i class="fas fa-mobile-alt"></i> Choisissez un restaurant</p>
             </a>
 
             <a href="*"class="accueil-nav__lien">
-                <div class="accueil-nav__lien__chiffre">2</div>
+                <p class="accueil-nav__lien__chiffre">2</p>
                 <p class="accueil-nav__lien__description"><i class="fas fa-list"></i> Composez votre menu</p>
             </a>
             
             <a href="*"class="accueil-nav__lien">
-                <div class="accueil-nav__lien__chiffre">3</div>
+                <p class="accueil-nav__lien__chiffre">3</p>
                 <p class="accueil-nav__lien__description"><i class="fas fa-store"></i> Dégustez au restaurant</p>
             </a>
         </nav>

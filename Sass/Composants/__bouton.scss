@@ -1,0 +1,11 @@
+.btn {
+    height: 2.5rem;
+    width: 12rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5rem;
+    background: linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
+    color: white;
+    margin: auto;
+    @include shadow;
+}
