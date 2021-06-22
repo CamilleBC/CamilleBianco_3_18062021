@@ -45,6 +45,7 @@ h1, h2, h3 {
 .carte {
   width: 300px;
   height: 220px;
+  margin: 1rem;
   border-radius: 1rem;
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
@@ -73,6 +74,26 @@ h1, h2, h3 {
 .carte__description__coeur {
   height: 1rem;
   align-self: center;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #353535;
+  color: white;
+}
+.footer__titre {
+  margin-block-start: 0;
+}
+.footer__lien {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer__lien a {
+  color: white;
+}
+.footer__lien a > i {
+  padding-right: 1rem;
 }
 
 .accueil-header {
