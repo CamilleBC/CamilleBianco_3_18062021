@@ -1,0 +1,18 @@
+.footer {
+    padding: map-get($padding, general );
+    background-color: #353535;
+    color: $color-text;
+    &__titre {
+        margin-block-start: 0;
+    }
+    &__lien {
+        @include alignement (row);
+        justify-content: space-around;
+        a {
+            color: $color-text;
+            > i {
+                padding-right: 1rem;
+            }
+        }
+    }
+}

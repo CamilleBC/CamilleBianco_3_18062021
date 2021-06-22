@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Roboto";
-  src: url(../../Font/Roboto-Light.ttf);
+  src: url(./Font/Roboto-light/Roboto-Light.ttf) format("truetype"), url(./Font/Roboto-light/roboto-light-webfont.eot) format("eot"), url(./Font/Roboto-light/roboto-light-webfont.svg) format("svg"), url(./Font/Roboto-light/roboto-light-webfont.woff) format("woff"), url(./Font/Roboto-light/Roboto-Light.otf) format("otf");
 }
 @font-face {
   font-family: "Roboto bold";
-  src: url(../../Font/RobotoCondensed-Bold.ttf);
+  src: url(./Font/Roboto-BoldCondensed/Roboto-BoldCondensed.ttf) format("truetype"), url(./Font/Roboto-BoldCondensed/roboto-boldcondensed-webfont.eot) format("eot"), url(./Font/Roboto-BoldCondensed/roboto-boldcondensed-webfont.svg) format("svg"), url(./Font/Roboto-BoldCondensed/roboto-boldcondensed-webfont.woff) format("woff"), url(./Font/Roboto-BoldCondensed/Roboto-BoldCondensed.otf) format("otf");
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url(../../Font/Shrikhand-Regular.otf);
+  src: url(./Font/Shrikhand-Regular/Shrikhand-Regular.otf) format("otf"), url(./Font/Shrikhand-Regular/shrikhand-regular-webfont.eot) format("eot"), url(./Font/Shrikhand-Regular/shrikhand-regular-webfont.svg) format("svg"), url(./Font/Shrikhand-Regular/shrikhand-regular-webfont.ttf) format("truetype"), url(./Font/Shrikhand-Regular/shrikhand-regular-webfont.woff) format("woff");
 }
 body {
   max-width: 1440px;
@@ -45,6 +45,7 @@ h1, h2, h3 {
 .carte {
   width: 300px;
   height: 220px;
+  margin: 1rem;
   border-radius: 1rem;
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
@@ -73,6 +74,26 @@ h1, h2, h3 {
 .carte__description__coeur {
   height: 1rem;
   align-self: center;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #353535;
+  color: white;
+}
+.footer__titre {
+  margin-block-start: 0;
+}
+.footer__lien {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer__lien a {
+  color: white;
+}
+.footer__lien a > i {
+  padding-right: 1rem;
 }
 
 .accueil-header {
