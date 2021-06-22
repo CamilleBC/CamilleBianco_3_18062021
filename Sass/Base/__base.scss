@@ -1,12 +1,13 @@
 @font-face 
-{
-	font-family:"Roboto";
-    src: url("./Font/Roboto-Light/Roboto-Light.ttf") format("truetype"),
-    url("./Font/Roboto-Light/roboto-light-webfont.eot") format("eot"),
-    url("./Font/Roboto-Light/roboto-light-webfont.svg") format("svg"),
-    url("./Font/Roboto-Light/roboto-light-webfont.woff") format("woff");
+{ 
+    font-family:"Roboto";
+    src: url("/Font/Roboto-light/Roboto-Light.ttf") format("truetype")
+    url("/Font/Roboto-Light/roboto-light-webfont.eot") format("eot"),
+    url("/Font/Roboto-Light/roboto-light-webfont.svg") format("svg"),
+    url("/Font/Roboto-Light/roboto-light-webfont.woff") format("woff"),
+    url("/Font/Roboto-light/Roboto-Light.otf") format("otf");
 }
-@font-face 
+@font-face
 {
     font-family: "Roboto bold";
     src: url(./Font/Roboto-BoldCondensed/Roboto-BoldCondensed.ttf);
