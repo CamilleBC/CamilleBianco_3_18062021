@@ -35,8 +35,24 @@
   justify-content: space-between;
   height: map-get($height, nav );
   padding: map-get($padding, general );
+  @include responsive (tablette)
+  {
+      height: map-get($height, nav-tablette );
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 1rem;
+      grid-template-areas: 
+      "t t"
+      "Na Nb"
+      "Nc Nc";
+      justify-items: center;
+  }
   &__titre {
       font-weight: bolder;
+      @include responsive (tablette){
+          grid-area: t;
+      }
   }
   &__lien {
     @include alignement(row);
@@ -45,6 +61,21 @@
     line-height: 2rem;
     background-color: $background-color;
     border-radius: 1rem;
+    &:nth-child(2){
+        @include responsive (tablette){
+            grid-area: Na;
+        }
+    }
+    &:nth-child(3){
+        @include responsive (tablette){
+            grid-area: Nb;
+        }
+    }
+    &:nth-child(4){
+        @include responsive (tablette){
+            grid-area: Nc;
+        }
+    }
     &__chiffre {
         border-radius: 50%;
         width: 1.5rem;
@@ -60,6 +91,7 @@
     &__description {
         box-sizing: border-box;
         padding: 0 3rem 0 0.5rem;
+        white-space: nowrap;
         > i {
             padding-right: 1rem;
             opacity: 0.5;
@@ -69,10 +101,19 @@
 }
 .accueil-section {
     background-color: $background-color;
-    padding: map-get($padding, general );
-    height: 320px;
+    padding: map-get($padding, general);
+    height: map-get($height, section );
+    @include responsive (tablette){
+        height: map-get($height, section-tablette)
+    }
     &__cartes{
         @include alignement(row);
         justify-content: space-around;
+        @include responsive (tablette){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+            justify-items: center;
+        }
     }
 }

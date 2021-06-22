@@ -7,5 +7,6 @@ $background-color : #f6f6f6;
 
 $border-radius_carte:1rem;
 
-$height : (header:250px, nav:100px);
+$height : (header:250px, nav:100px, nav-tablette:250px, section:320px, section-tablette:600px);
 $padding : (general:1rem);
+$breakpoint : (tablette:1024px, mobile:600px);
