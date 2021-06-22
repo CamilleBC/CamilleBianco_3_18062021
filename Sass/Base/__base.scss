@@ -1,20 +1,19 @@
 @font-face 
 {
 	font-family:"Roboto";
-    src: url(./Font/Roboto-Light.ttf) format(truetype),
-    url(./Font/Roboto-Light.otf) format(otf),
-    url(./Font/Roboto-Light.eot) format(eot),
-    url(./Font/Roboto-Light.woff) format(woff),
-    url(./Font/Roboto-Light.svg) format(svg);
+    src: url("./Font/Roboto-Light/Roboto-Light.ttf") format("truetype"),
+    url("./Font/Roboto-Light/roboto-light-webfont.eot") format("eot"),
+    url("./Font/Roboto-Light/roboto-light-webfont.svg") format("svg"),
+    url("./Font/Roboto-Light/roboto-light-webfont.woff") format("woff")
 }
 @font-face 
 {
     font-family: "Roboto bold";
-    src: url(./Font/RobotoCondensed-Bold.ttf);
+    src: url(./Font/Roboto-BoldCondensed/Roboto-BoldCondensed.ttf);
 }
 @font-face {
     font-family: "Shrikhand";
-    src: url(./Font/Shrikhand-Regular.otf);
+    src: url(./Font/Shrikhand-Regular/Shrikhand-Regular.otf);
 }
 
 body {
