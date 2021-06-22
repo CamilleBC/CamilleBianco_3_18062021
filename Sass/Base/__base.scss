@@ -31,6 +31,9 @@ body {
     width: 100%;
     margin: auto;
     font-family: "Roboto";
+    @include responsive (mobile) {
+        max-width: 600px;
+    }
 }
 
 a {
@@ -40,6 +43,10 @@ a {
 
 h1, h2, h3 {
     font-family: "Roboto bold";
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 
 .footer__titre {

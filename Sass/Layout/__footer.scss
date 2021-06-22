@@ -8,8 +8,14 @@
     &__lien {
         @include alignement (row);
         justify-content: space-around;
+        @include responsive (mobile){
+        flex-direction: column;
+        }
         a {
             color: $color-text;
+            @include responsive (mobile) {
+                margin: 0.3rem;
+            }
             > i {
                 padding-right: 1rem;
             }
