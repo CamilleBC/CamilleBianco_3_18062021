@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url(./Font/Roboto-Light.ttf);
+  src: url(./Font/Roboto-Light.ttf) format(truetype), url(./Font/Roboto-Light.otf) format(otf), url(./Font/Roboto-Light.eot) format(eot), url(./Font/Roboto-Light.woff) format(woff), url(./Font/Roboto-Light.svg) format(svg);
 }
 @font-face {
   font-family: "Roboto bold";
