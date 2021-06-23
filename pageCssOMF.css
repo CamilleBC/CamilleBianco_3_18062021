@@ -58,6 +58,7 @@ h1 {
   border-radius: 1rem;
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
+  box-sizing: border-box;
 }
 .carte__image {
   box-sizing: border-box;
@@ -210,11 +211,7 @@ h1 {
 }
 .accueil-nav__titre {
   font-weight: bolder;
-}
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  .accueil-nav__titre {
-    grid-area: t;
-  }
+  grid-area: t;
 }
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .accueil-nav__titre {
@@ -232,24 +229,22 @@ h1 {
 }
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .accueil-nav__lien {
-    width: 95%;
+    text-align: start;
+    width: 90%;
     margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  .accueil-nav__lien:nth-child(2) {
-    grid-area: Na;
-  }
+.accueil-nav__lien:nth-child(2) {
+  grid-area: Na;
 }
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  .accueil-nav__lien:nth-child(3) {
-    grid-area: Nb;
-  }
+.accueil-nav__lien:nth-child(3) {
+  grid-area: Nb;
 }
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  .accueil-nav__lien:nth-child(4) {
-    grid-area: Nc;
-  }
+.accueil-nav__lien:nth-child(4) {
+  grid-area: Nc;
 }
 .accueil-nav__lien__chiffre {
   border-radius: 50%;

@@ -6,6 +6,7 @@
     border-radius: $border-radius_carte;
     background-color: white;
     @include shadow;
+    box-sizing: border-box;
     &__image {
         box-sizing: border-box;
         border-radius: $border-radius_carte $border-radius_carte 0 0;
