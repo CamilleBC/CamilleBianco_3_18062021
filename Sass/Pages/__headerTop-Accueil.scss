@@ -1,0 +1,35 @@
+.header-top {
+    @include alignement(row);
+    justify-content: space-between;
+    padding: map-get($padding, general);
+    @include responsive (mobile) {
+        flex-direction: column;
+        padding: 0;
+    }
+    &__logo {
+        @include responsive (mobile) {
+            padding: map-get($padding, general );
+            text-align: center;
+        }
+    }
+    &__saisie {
+        @include alignement(row);
+        justify-content: center;
+        background-color: $color-saisie;
+        width: 30%;
+        @include responsive (mobile) {
+            width: 100%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+        }
+        &__label {
+            line-height: 2rem;
+            padding: 0 0.5rem 0  0.5rem;
+        }
+        &__input {
+           background-color: $color-saisie;
+           font-weight: bold;
+           border: none;
+       }
+    }
+}

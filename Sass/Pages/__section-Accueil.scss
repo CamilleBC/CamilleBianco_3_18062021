@@ -1,0 +1,24 @@
+.accueil-section {
+    background-color: $background-color;
+    padding: map-get($padding, general);
+    height: map-get($height, section);
+    @include responsive (tablette){
+        height: map-get($height, section-tablette)
+    }
+    @include responsive (mobile){
+        height: map-get($height , section-tel );
+    }
+    &__cartes{
+        @include alignement(row);
+        justify-content: space-around;
+        @include responsive (tablette){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+            justify-items: center;
+        }
+        @include responsive (mobile) {
+            flex-direction: column;
+        }
+    }
+}
