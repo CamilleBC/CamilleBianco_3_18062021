@@ -5,6 +5,9 @@
     margin: 1rem;
     padding: 0.5rem;
     border-radius: 1rem;
+    @include responsive (tablette){
+        width: 39%;
+    }
     &__titre {
         margin-block-start: 0px;
         font-size: 1.2rem
@@ -12,8 +15,14 @@
     &__description {
         @include alignement (row);
         justify-content: space-between;
+        &__phrase{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 85%;
+        }
         &__prix {
-            font-family: "Roboto bold";
+            font-family: "Roboto bold";            
         }
     }
 }
