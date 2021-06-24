@@ -121,7 +121,7 @@ h1 {
   height: 400px;
   width: 100%;
   text-align: center;
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
+  background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
   background-size: cover;
 }
 .header__titre__nom {
