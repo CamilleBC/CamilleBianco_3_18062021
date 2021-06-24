@@ -1,0 +1,19 @@
+.carte-nourriture {
+    background-color: white;
+    @include shadow;
+    width: 33%;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    &__titre {
+        margin-block-start: 0px;
+        font-size: 1.2rem
+    }
+    &__description {
+        @include alignement (row);
+        justify-content: space-between;
+        &__prix {
+            font-family: "Roboto bold";
+        }
+    }
+}

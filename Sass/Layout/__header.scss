@@ -21,6 +21,7 @@
             position: relative;
             top: 60%;
             background-color: $background-color;
+            margin-bottom: 0px;
             @include alignement (row);
             justify-content: center;
             align-items: center;

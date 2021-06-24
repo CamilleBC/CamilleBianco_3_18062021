@@ -1,0 +1,18 @@
+.section {
+    background: $background-color;
+    &-article{
+        padding: 2rem;
+        &__titre {
+            > h2 {
+                @include under-title ($color-tertiary);
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-family: "Roboto";
+                font-weight: normal;
+            }
+        }
+        &__body {
+            @include alignement (row);
+        }
+    }
+}
