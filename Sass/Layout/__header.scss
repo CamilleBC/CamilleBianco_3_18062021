@@ -3,17 +3,37 @@
         padding: map-get($padding, general );
         @include alignement (row);
         justify-content: space-between;
-        &__image{
+        @include responsive (mobile){
+            padding: 1.5rem;
+            height: 5px;
+        }
+        &__image {
             height: 2rem;
             object-fit: cover;
+            @include responsive (mobile) {
+                margin: auto;
+            }
+        }
+        > a {
+            @include responsive (mobile){
+                line-height: 2rem;
+                font-size: 1.5rem;
+            }
         }
     }
     &__titre{
         height: 400px;
         width: 100%;
         text-align: center;
+<<<<<<< HEAD
         background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
         background-size: cover;
+=======
+        @include responsive (mobile)
+        {
+            height: 300px;
+        }
+>>>>>>> develop
         &__nom{
             border-radius: 5rem 5rem 0 0;
             font-size: 3rem;
@@ -25,14 +45,31 @@
             @include alignement (row);
             justify-content: center;
             align-items: center;
+            @include responsive (mobile) {
+                height: 100px;
+                font-size: 1.7rem;
+                border-radius: 2rem 2rem 0 0;
+                top: 80%;
+            }
             > div {
                 font-family: "Shrikhand";
+                @include responsive (mobile) {
+                    position: relative;
+                    top: 5%;
+                }
             }
             i {
                 padding-left: 5rem;
-
+                @include responsive (mobile){
+                    padding-left: 2.5rem; 
+                }
             }
             
         }
     }
+}
+
+#background--menu1{
+    background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
+    background-size: cover;
 }
