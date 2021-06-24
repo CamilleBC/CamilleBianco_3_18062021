@@ -5,8 +5,13 @@
     margin: 1rem;
     padding: 0.5rem;
     border-radius: 1rem;
+    box-sizing: border-box;
     @include responsive (tablette){
         width: 39%;
+    }
+    @include responsive (mobile){
+        width: 100%;
+        margin: 1rem 0 1rem 0;
     }
     &__titre {
         margin-block-start: 0px;

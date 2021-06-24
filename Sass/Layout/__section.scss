@@ -1,7 +1,13 @@
 .section {
     background: $background-color;
+    @include responsive (mobile) {
+        padding: 1rem 0 2rem 0;
+    }
     &-article{
         padding: 2rem;
+        @include responsive (mobile){
+            padding: 0.5rem;
+        }
         &__titre {
             > h2 {
                 @include under-title ($color-tertiary);
@@ -13,11 +19,21 @@
         }
         &__body {
             @include alignement (row);
+            box-sizing: border-box;
             @include responsive (tablette){
-                justify-content: center;
                 flex-wrap: wrap;
         }
-            
+            @include responsive (mobile){
+                @include alignement (column);
+                align-content: center;
+            }
+        }
+    }
+    &-button {
+        text-align: center;
+        padding: 0 0 2rem 0;
+        @include responsive (mobile){
+            padding-top: 1rem;
         }
     }
 }
