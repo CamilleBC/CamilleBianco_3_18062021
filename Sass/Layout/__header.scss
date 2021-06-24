@@ -1,0 +1,37 @@
+.header {
+    &__logo {
+        padding: map-get($padding, general );
+        @include alignement (row);
+        justify-content: space-between;
+        &__image{
+            height: 2rem;
+            object-fit: cover;
+        }
+    }
+    &__titre{
+        height: 400px;
+        width: 100%;
+        text-align: center;
+        background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
+        background-size: cover;
+        &__nom{
+            border-radius: 5rem 5rem 0 0;
+            font-size: 3rem;
+            height: 160px;
+            position: relative;
+            top: 60%;
+            background-color: $background-color;
+            @include alignement (row);
+            justify-content: center;
+            align-items: center;
+            > div {
+                font-family: "Shrikhand";
+            }
+            i {
+                padding-left: 5rem;
+
+            }
+            
+        }
+    }
+}
