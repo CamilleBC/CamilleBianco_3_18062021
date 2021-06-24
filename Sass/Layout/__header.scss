@@ -25,15 +25,10 @@
         height: 400px;
         width: 100%;
         text-align: center;
-<<<<<<< HEAD
-        background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
-        background-size: cover;
-=======
         @include responsive (mobile)
         {
             height: 300px;
         }
->>>>>>> develop
         &__nom{
             border-radius: 5rem 5rem 0 0;
             font-size: 3rem;
@@ -67,9 +62,4 @@
             
         }
     }
-}
-
-#background--menu1{
-    background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
-    background-size: cover;
 }
