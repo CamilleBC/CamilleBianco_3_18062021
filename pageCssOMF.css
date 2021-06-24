@@ -94,6 +94,11 @@ h1 {
   padding: 0.5rem;
   border-radius: 1rem;
 }
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .carte-nourriture {
+    width: 39%;
+  }
+}
 .carte-nourriture__titre {
   margin-block-start: 0px;
   font-size: 1.2rem;
@@ -102,6 +107,12 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.carte-nourriture__description__phrase {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 85%;
 }
 .carte-nourriture__description__prix {
   font-family: "Roboto bold";
@@ -129,7 +140,7 @@ h1 {
   font-size: 3rem;
   height: 160px;
   position: relative;
-  top: 60%;
+  top: 62%;
   background-color: #f6f6f6;
   margin-bottom: 0px;
   display: flex;
@@ -161,6 +172,12 @@ h1 {
 .section-article__body {
   display: flex;
   flex-direction: row;
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .section-article__body {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer {

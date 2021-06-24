@@ -13,6 +13,11 @@
         }
         &__body {
             @include alignement (row);
+            @include responsive (tablette){
+                justify-content: center;
+                flex-wrap: wrap;
+        }
+            
         }
     }
 }
