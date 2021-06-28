@@ -8,4 +8,8 @@
     color: white;
     margin: auto;
     @include shadow;
+    &:hover{
+        background: linear-gradient(174deg, lighten($color-secondary,5%) 0%, lighten($color-primary,5%) 100%);
+        @include bold-shadow;
+    }
 }

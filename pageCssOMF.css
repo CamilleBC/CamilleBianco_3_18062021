@@ -39,6 +39,42 @@ h1 {
   font-family: "Shrikhand";
 }
 
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+    opacity: 1;
+  }
+  99.9% {
+    transform: rotate(3turn);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+}
+.loading-spinner::before {
+  content: "";
+  width: max-content;
+  height: max-content;
+}
+.loading-spinner::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 7px #ebe5e5;
+  border-top: solid 7px blue;
+  animation: loading 3s 0s linear both;
+  position: fixed;
+  top: 50%;
+  margin: auto;
+  z-index: 1;
+}
+
 .btn {
   height: 2.5rem;
   width: 12rem;
@@ -49,6 +85,10 @@ h1 {
   color: white;
   margin: auto;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
+}
+.btn:hover {
+  background: linear-gradient(174deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 0px 10px 20px -6px rgba(121, 121, 121, 0.8);
 }
 
 .carte {
