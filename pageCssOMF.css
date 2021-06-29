@@ -52,14 +52,29 @@ h1 {
     opacity: 0;
   }
 }
+@keyframes mask {
+  99% {
+    opacity: 0.8;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .loading-spinner {
   display: flex;
   justify-content: center;
 }
 .loading-spinner::before {
   content: "";
-  width: max-content;
-  height: max-content;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.8;
+  animation: mask 3s 0s linear both;
 }
 .loading-spinner::after {
   content: "";
@@ -67,7 +82,8 @@ h1 {
   height: 50px;
   border-radius: 50%;
   border: solid 7px #ebe5e5;
-  border-top: solid 7px blue;
+  border-top: solid 7px #9356DC;
+  border-bottom: solid 7px #FF79DA;
   animation: loading 3s 0s linear both;
   position: fixed;
   top: 50%;
@@ -85,10 +101,27 @@ h1 {
   color: white;
   margin: auto;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
+  opacity: 1;
+  cursor: pointer;
+  transition: all 200ms linear;
 }
 .btn:hover {
-  background: linear-gradient(174deg, #ff93e1 0%, #a16be0 100%);
+  opacity: 0.85;
   box-shadow: 0px 10px 20px -6px rgba(121, 121, 121, 0.8);
+}
+
+.heart--full {
+  position: absolute;
+  color: #FF79DA;
+  opacity: 1;
+  top: 33.3%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  transition: 400ms 0s linear;
+}
+.heart--full:hover {
+  opacity: 1;
 }
 
 .carte {
@@ -127,13 +160,15 @@ h1 {
 }
 
 .carte-nourriture {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
-  width: 33%;
   margin: 1rem;
-  padding: 0.5rem;
+  margin-right: 0px;
   border-radius: 1rem;
   box-sizing: border-box;
+  width: 33%;
 }
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .carte-nourriture {
@@ -146,25 +181,70 @@ h1 {
     margin: 1rem 0 1rem 0;
   }
 }
-.carte-nourriture__titre {
-  margin-block-start: 0px;
-  font-size: 1.2rem;
+.carte-nourriture__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "t t ." "d d .";
 }
-.carte-nourriture__description {
+.carte-nourriture__container__titre {
+  margin-block-start: 0px;
+  padding: 0.5rem 0 0 0.5rem;
+  font-size: 1.2rem;
+  grid-area: t;
+}
+.carte-nourriture__container__description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 0.5rem;
+  grid-area: d;
 }
-.carte-nourriture__description__phrase {
+.carte-nourriture__container__description__phrase {
+  padding-left: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
 }
-.carte-nourriture__description__prix {
+.carte-nourriture__container__description__prix {
   font-family: "Roboto bold";
 }
+.carte-nourriture__container:hover + .carte-nourriture__cocher {
+  animation: cocher 0.5s linear forwards;
+}
+.carte-nourriture__container:hover + .carte-nourriture__cocher > i {
+  transform: rotate(0deg);
+  transition: 0.25s 0.125s linear;
+}
+.carte-nourriture__cocher {
+  opacity: 0;
+  background-color: #99E2D0;
+  line-height: 77px;
+  border-radius: 0 1rem 1rem 0;
+  width: 20px;
+  text-align: center;
+  height: 77px;
+}
+.carte-nourriture__cocher > i {
+  background-color: white;
+  transform: rotate(180deg);
+  color: #99E2D0;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
 
+@keyframes cocher {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+  }
+}
 #background--menu1 {
   background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
   background-size: cover;

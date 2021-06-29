@@ -8,8 +8,11 @@
     color: white;
     margin: auto;
     @include shadow;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 200ms linear;
     &:hover{
-        background: linear-gradient(174deg, lighten($color-secondary,5%) 0%, lighten($color-primary,5%) 100%);
+        opacity: 0.85;
         @include bold-shadow;
     }
 }

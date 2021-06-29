@@ -1,33 +1,83 @@
 .carte-nourriture {
+    @include alignement (row);
     background-color: white;
     @include shadow;
-    width: 33%;
     margin: 1rem;
-    padding: 0.5rem;
+    margin-right: 0px;
     border-radius: 1rem;
     box-sizing: border-box;
+    width: 33%;
     @include responsive (tablette){
         width: 39%;
     }
     @include responsive (mobile){
         width: 100%;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;  
     }
-    &__titre {
-        margin-block-start: 0px;
-        font-size: 1.2rem
+    &__container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "t t ."
+        "d d .";
+            &__titre {
+                margin-block-start: 0px;
+                padding: 0.5rem 0 0 0.5rem;
+                font-size: 1.2rem;
+                grid-area: t;
+            }
+            &__description {
+                @include alignement (row);
+                justify-content: space-between;
+                padding-bottom: 0.5rem;
+                grid-area: d;
+                &__phrase{
+                    padding-left: 0.5rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 85%;
+                }
+                &__prix {
+                    font-family: "Roboto bold";            
+                }
+            }
+            &:hover + .carte-nourriture__cocher{
+                animation: cocher 0.5s linear forwards;
+                > i{
+                    transform: rotate(0deg);
+                    transition: 0.25s 0.125s linear;
+                }
+            }
     }
-    &__description {
-        @include alignement (row);
-        justify-content: space-between;
-        &__phrase{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 85%;
+    &__cocher{
+        opacity: 0;
+        background-color: $color-tertiary;
+        line-height: 77px;
+        border-radius: 0 1rem 1rem 0;
+        width: 20px;;
+        text-align: center;
+        height: 77px;
+        > i {
+            background-color: white;
+            transform: rotate(180deg);
+            color: $color-tertiary;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 50%;
         }
-        &__prix {
-            font-family: "Roboto bold";            
-        }
+    }
+}
+
+@keyframes cocher{
+    20%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 100px;
+        opacity: 1;
     }
 }

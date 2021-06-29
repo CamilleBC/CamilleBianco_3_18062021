@@ -1,0 +1,16 @@
+
+.heart{
+   &--full{
+    position: absolute;
+    color: $color-secondary;
+    opacity: 1;
+    top: 33.3%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    transition: 400ms 0s linear;
+    &:hover{
+        opacity: 1;
+    }
+   }
+}
