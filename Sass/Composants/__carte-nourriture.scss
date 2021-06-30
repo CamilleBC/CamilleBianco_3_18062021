@@ -1,3 +1,61 @@
+@keyframes cocher{
+    1%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes cocherOut{
+    0%{
+        width: 100px ;
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    99%{
+        width: 7px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    25%{
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotationOut {
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    75%{
+        transform: rotate(0deg);
+        opacity: 1
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
 .carte-nourriture {
     @include alignement (row);
     background-color: white;
@@ -45,21 +103,21 @@
                 }
             }
             &:hover + .carte-nourriture__cocher{
-                animation: cocher 0.5s linear forwards;
+                animation: cocher 0.5s ease-in-out both;
                 > i{
-                    transform: rotate(0deg);
-                    transition: 0.25s 0.125s linear;
+                    animation: rotation 0.25s 0.125s linear both;
                 }
             }
     }
     &__cocher{
         opacity: 0;
         background-color: $color-tertiary;
-        line-height: 77px;
+        line-height: 83px;
         border-radius: 0 1rem 1rem 0;
-        width: 20px;;
+        width: 7px;;
         text-align: center;
         height: 100%;
+        animation: cocherOut 0.5s ease-in-out both ;
         > i {
             background-color: white;
             transform: rotate(180deg);
@@ -67,17 +125,9 @@
             text-align: center;
             padding: 0.5rem;
             border-radius: 50%;
+            animation: rotationOut 0.25s 0.125s linear both;
         }
     }
 }
 
-@keyframes cocher{
-    20%{
-        opacity: 1;
-    }
 
-    100%{
-        width: 100px;
-        opacity: 1;
-    }
-}
