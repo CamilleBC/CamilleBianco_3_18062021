@@ -1,0 +1,56 @@
+@keyframes loading{
+    0%{
+        transform: rotate(0turn) ;
+        opacity: 1;
+    }
+    99.9%{
+        transform: rotate(3turn);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes mask{
+    99%{
+        opacity: 0.8;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.loading-spinner{
+    display: flex;
+    justify-content: center;
+    &::before{
+        content: "";
+        position: fixed;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        opacity: 0.8;
+        animation: mask 3s 0s linear both ;
+
+    }
+    &::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 7px rgb(235, 229, 229);
+        border-top: solid 7px $color-primary;
+        border-bottom: solid 7px $color-secondary ;
+        animation: loading 3s 0s linear both;
+        position: fixed;
+        top: 50%;
+        margin: auto;
+        z-index: 2 ;
+    }
+}
+
+
