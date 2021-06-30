@@ -1,33 +1,133 @@
+@keyframes cocher{
+    1%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes cocherOut{
+    0%{
+        width: 100px ;
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    99%{
+        width: 7px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    25%{
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotationOut {
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    75%{
+        transform: rotate(0deg);
+        opacity: 1
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
 .carte-nourriture {
+    @include alignement (row);
     background-color: white;
     @include shadow;
-    width: 33%;
     margin: 1rem;
-    padding: 0.5rem;
+    margin-right: 0px;
     border-radius: 1rem;
     box-sizing: border-box;
+    width: 33%;
     @include responsive (tablette){
         width: 39%;
     }
     @include responsive (mobile){
         width: 100%;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;  
     }
-    &__titre {
-        margin-block-start: 0px;
-        font-size: 1.2rem
+    &__container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "t t ."
+        "d d .";
+            &__titre {
+                margin-block-start: 0px;
+                padding: 0.5rem 0 0 0.5rem;
+                font-size: 1.2rem;
+                grid-area: t;
+            }
+            &__description {
+                @include alignement (row);
+                justify-content: space-between;
+                padding-bottom: 0.5rem;
+                grid-area: d;
+                &__phrase{
+                    padding-left: 0.5rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 85%;
+                }
+                &__prix {
+                    font-family: "Roboto bold";            
+                }
+            }
+            &:hover + .carte-nourriture__cocher{
+                animation: cocher 0.5s ease-in-out both;
+                > i{
+                    animation: rotation 0.25s 0.125s linear both;
+                }
+            }
     }
-    &__description {
-        @include alignement (row);
-        justify-content: space-between;
-        &__phrase{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 85%;
-        }
-        &__prix {
-            font-family: "Roboto bold";            
+    &__cocher{
+        opacity: 0;
+        background-color: $color-tertiary;
+        line-height: 83px;
+        border-radius: 0 1rem 1rem 0;
+        width: 7px;;
+        text-align: center;
+        height: 100%;
+        animation: cocherOut 0.5s ease-in-out both ;
+        > i {
+            background-color: white;
+            transform: rotate(180deg);
+            color: $color-tertiary;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 50%;
+            animation: rotationOut 0.25s 0.125s linear both;
         }
     }
 }
+
+

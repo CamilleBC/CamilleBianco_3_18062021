@@ -8,4 +8,11 @@
     color: white;
     margin: auto;
     @include shadow;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 200ms linear;
+    &:hover{
+        opacity: 0.85;
+        @include bold-shadow;
+    }
 }
