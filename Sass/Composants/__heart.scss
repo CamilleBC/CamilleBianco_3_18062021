@@ -1,22 +1,26 @@
 
 .heart{
+    position: relative;
    &-full{
     position: absolute;
-    color: $color-secondary;
-    top: 33.3%;
+    right: 0%;
+    color: transparent;
+    background: linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
     opacity: 0;
     cursor: pointer;
     z-index: 2;
     transition: 400ms 0s linear;
-    @include responsive (mobile){
-        top: 0%;
-    }
     &:hover{
         opacity: 1;
     }
     &--accueil{
         position: relative;
-        color: $color-secondary;
+        color: transparent;
+        background: linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
         font-size: 0.8rem;
         opacity: 0;
         cursor: pointer;

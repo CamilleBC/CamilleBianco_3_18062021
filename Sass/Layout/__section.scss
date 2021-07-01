@@ -3,6 +3,9 @@
     @include responsive (mobile) {
         padding: 1rem 0 2rem 0;
     }
+    &__titre{
+        display: none;
+    }
     &-article{
         padding: 2rem;
         @include responsive (mobile){

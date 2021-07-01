@@ -11,7 +11,7 @@
         width: 39%;
     }
     @include responsive (mobile){
-        width: 100%;
+        width: 95%;
         margin: 1rem 0 1rem 0;  
     }
     animation: apparitions $anim-duration linear both;
