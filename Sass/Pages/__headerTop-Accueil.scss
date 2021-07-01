@@ -7,6 +7,8 @@
         padding: 0;
     }
     &__logo {
+        font-family: "Shrikhand";
+        font-size: 2rem;
         @include responsive (mobile) {
             padding: map-get($padding, general );
             text-align: center;

@@ -8,8 +8,8 @@
             height: 5px;
         }
         &__image {
-            height: 2rem;
-            object-fit: cover;
+            font-size: 2rem;
+            font-family: "Shrikhand";
             @include responsive (mobile) {
                 margin: auto;
             }
