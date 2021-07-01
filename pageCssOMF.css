@@ -1,3 +1,86 @@
+@keyframes loading {
+  0% {
+    transform: rotate(0turn);
+    opacity: 1;
+  }
+  99.9% {
+    transform: rotate(3turn);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mask {
+  99% {
+    opacity: 0.8;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes cocher {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes cocherOut {
+  0% {
+    width: 100px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    width: 7px;
+    opacity: 0;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes rotationOut {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes apparitions {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url(./Font/Roboto-light/Roboto-Light.ttf) format("truetype"), url(./Font/Roboto-light/roboto-light-webfont.eot) format("eot"), url(./Font/Roboto-light/roboto-light-webfont.svg) format("svg"), url(./Font/Roboto-light/roboto-light-webfont.woff) format("woff"), url(./Font/Roboto-light/Roboto-Light.otf) format("otf");
@@ -39,29 +122,6 @@ h1 {
   font-family: "Shrikhand";
 }
 
-@keyframes loading {
-  0% {
-    transform: rotate(0turn);
-    opacity: 1;
-  }
-  99.9% {
-    transform: rotate(3turn);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes mask {
-  99% {
-    opacity: 0.8;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -177,56 +237,6 @@ h1 {
   align-self: center;
 }
 
-@keyframes cocher {
-  1% {
-    opacity: 1;
-  }
-  100% {
-    width: 100px;
-    opacity: 1;
-  }
-}
-@keyframes cocherOut {
-  0% {
-    width: 100px;
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  99% {
-    width: 7px;
-    opacity: 0;
-  }
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(180deg);
-    opacity: 0;
-  }
-  25% {
-    transform: rotate(180deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-}
-@keyframes rotationOut {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  75% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-}
 .carte-nourriture {
   display: flex;
   flex-direction: row;
@@ -237,6 +247,7 @@ h1 {
   border-radius: 1rem;
   box-sizing: border-box;
   width: 33%;
+  animation: apparitions 0.5s linear both;
 }
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   .carte-nourriture {
@@ -249,6 +260,18 @@ h1 {
     margin: 1rem 0 1rem 0;
   }
 }
+.carte-nourriture:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.carte-nourriture:nth-child(2) {
+  animation-delay: 1s;
+}
+.carte-nourriture:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.carte-nourriture:nth-child(4) {
+  animation-delay: 2s;
+}
 .carte-nourriture__container {
   width: 100%;
   display: grid;
@@ -260,6 +283,9 @@ h1 {
   margin-block-start: 0px;
   padding: 0.5rem 0 0 0.5rem;
   font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   grid-area: t;
 }
 .carte-nourriture__container__description {

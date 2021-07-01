@@ -1,0 +1,93 @@
+@keyframes loading{
+    0%{
+        transform: rotate(0turn) ;
+        opacity: 1;
+    }
+    99.9%{
+        transform: rotate(3turn);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes mask{
+    99%{
+        opacity: 0.8;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes cocher{
+    1%{
+        opacity: 1;
+    }
+
+    100%{
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes cocherOut{
+    0%{
+        width: 100px ;
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    99%{
+        width: 7px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    25%{
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotationOut {
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    75%{
+        transform: rotate(0deg);
+        opacity: 1
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes apparitions{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

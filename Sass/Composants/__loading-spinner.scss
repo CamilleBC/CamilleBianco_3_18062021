@@ -1,28 +1,3 @@
-@keyframes loading{
-    0%{
-        transform: rotate(0turn) ;
-        opacity: 1;
-    }
-    99.9%{
-        transform: rotate(3turn);
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-@keyframes mask{
-    99%{
-        opacity: 0.8;
-        z-index: 1;
-    }
-    100%{
-        opacity: 0;
-        z-index: -10;
-    }
-}
-
 .loading-spinner{
     display: flex;
     justify-content: center;

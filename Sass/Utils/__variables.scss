@@ -13,3 +13,7 @@ section:320px, section-tablette:600px, section-tel:1100px);
 $padding : (general:1rem);
 $breakpoint-max : (tablette:1024px, mobile:600px);
 $breakpoint-min : (tablette:600px, mobile:320px);
+
+$num-cartes: 5;
+$anim-duration:0.5s;
+$anim-delay: $anim-duration;
