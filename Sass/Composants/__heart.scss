@@ -2,6 +2,7 @@
 .heart{
     position: relative;
     background: -webkit-linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     &:hover{
         -webkit-text-fill-color: transparent;
@@ -16,6 +17,7 @@
     right: 0%;
     color: transparent;
     background: linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
     cursor: pointer;
