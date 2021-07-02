@@ -172,13 +172,18 @@ h1 {
 
 .heart {
   position: relative;
+  background: -webkit-linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: black;
+}
+.heart:hover {
+  -webkit-text-fill-color: transparent;
 }
 .heart-full {
   position: absolute;
   right: 0%;
   color: transparent;
   background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   cursor: pointer;
@@ -186,23 +191,6 @@ h1 {
   transition: 400ms 0s linear;
 }
 .heart-full:hover {
-  opacity: 1;
-}
-.heart-full--accueil {
-  position: relative;
-  color: transparent;
-  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-size: 0.8rem;
-  opacity: 0;
-  cursor: pointer;
-  top: -110%;
-  left: 10%;
-  z-index: 10;
-  transition: 400ms 0s linear;
-}
-.heart-full--accueil:hover {
   opacity: 1;
 }
 
@@ -258,6 +246,30 @@ h1 {
 .carte__description__coeur {
   height: 1rem;
   align-self: center;
+  background: -webkit-linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: black;
+}
+.carte__description__coeur:hover {
+  -webkit-text-fill-color: transparent;
+}
+.carte__description__coeur--full {
+  position: relative;
+  color: transparent;
+  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 0.8rem;
+  opacity: 0;
+  cursor: pointer;
+  top: -110%;
+  left: 10%;
+  z-index: 10;
+  transition: 400ms 0s linear;
+}
+.carte__description__coeur--full:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .carte-nourriture {
