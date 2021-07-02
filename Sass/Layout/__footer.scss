@@ -3,7 +3,7 @@
     background-color: #353535;
     color: $color-text;
     &__titre {
-        margin-block-start: 0;
+        margin-block-start: inherit;
     }
     &__lien {
         @include alignement (row);

@@ -15,4 +15,10 @@
         opacity: 0.85;
         @include bold-shadow;
     }
+    @include responsive (mobile) {
+        &:active{
+            opacity: 0.85;
+            @include bold-shadow;
+        }
+    }
 }
