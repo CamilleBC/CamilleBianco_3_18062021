@@ -218,9 +218,6 @@ h1 {
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 .carte__tag {
   position: absolute;
@@ -233,6 +230,13 @@ h1 {
   font-weight: bold;
   color: #278870;
   background-color: #99E2D0;
+}
+.carte__image {
+  box-sizing: border-box;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
 }
 .carte__description {
   background-color: white;
@@ -251,6 +255,7 @@ h1 {
   font-weight: bolder;
 }
 .carte__description__coeur {
+  position: relative;
   height: 1rem;
   align-self: center;
   background: -webkit-linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
@@ -260,22 +265,19 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 .carte__description__coeur--full {
-  position: relative;
+  position: absolute;
   color: transparent;
   background: linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
   -webkit-background-clip: text;
-  font-size: 0.8rem;
   opacity: 0;
   cursor: pointer;
-  top: -110%;
-  left: 10%;
+  top: 0%;
+  left: 0%;
   z-index: 10;
   transition: 400ms 0s linear;
 }
 .carte__description__coeur--full:hover {
   opacity: 1;
-  transform: scale(1.1);
 }
 
 .carte-nourriture {
@@ -321,7 +323,7 @@ h1 {
   grid-template-areas: "t t ." "d d .";
 }
 .carte-nourriture__container__titre {
-  margin-block-start: 0px;
+  margin-block-start: inherit;
   padding: 0.5rem 0 0 0.5rem;
   font-size: 1.2rem;
   white-space: nowrap;
@@ -386,15 +388,15 @@ h1 {
   background-size: cover;
 }
 #background--menu2 {
-  background: url(./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) 50% 60% no-repeat;
+  background: url(./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) 50% 65% no-repeat;
   background-size: cover;
 }
 #background--menu3 {
-  background: url(./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) 50% 80% no-repeat;
+  background: url(./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) 0% 90% no-repeat;
   background-size: cover;
 }
 #background--menu4 {
-  background: url(./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) 50% 80% no-repeat;
+  background: url(./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) 50% 100% no-repeat;
   background-size: cover;
 }
 
@@ -410,7 +412,7 @@ h1 {
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .header__logo {
     padding: 1.5rem;
-    height: 5px;
+    height: 20px;
   }
 }
 .header__logo__image {
@@ -531,7 +533,7 @@ h1 {
   color: white;
 }
 .footer__titre {
-  margin-block-start: 0;
+  margin-block-start: inherit;
 }
 .footer__lien {
   display: flex;
@@ -658,7 +660,7 @@ h1 {
 }
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .accueil-nav__titre {
-    margin-block-end: 0;
+    margin-block-end: inherit;
   }
 }
 .accueil-nav__lien {
