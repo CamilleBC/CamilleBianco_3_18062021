@@ -169,6 +169,12 @@ h1 {
   opacity: 0.85;
   box-shadow: 0px 10px 20px -6px rgba(121, 121, 121, 0.8);
 }
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .btn:active {
+    opacity: 0.85;
+    box-shadow: 0px 10px 20px -6px rgba(121, 121, 121, 0.8);
+  }
+}
 
 .heart {
   position: relative;
@@ -177,6 +183,11 @@ h1 {
 }
 .heart:hover {
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .heart:active {
+    -webkit-text-fill-color: transparent;
+  }
 }
 .heart-full {
   position: absolute;
@@ -192,8 +203,14 @@ h1 {
 .heart-full:hover {
   opacity: 1;
 }
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .heart-full:active {
+    -webkit-text-fill-color: transparent;
+  }
+}
 
 .carte {
+  position: relative;
   width: 300px;
   height: 220px;
   margin: 1rem;
@@ -201,34 +218,25 @@ h1 {
   background-color: white;
   box-shadow: 0px 10px 14px -6px rgba(121, 121, 121, 0.5);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .carte__tag {
   position: absolute;
-  margin: 1rem 0 0 10rem;
+  top: 1rem;
+  right: 1rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
+  text-align: center;
+  width: 5rem;
   font-weight: bold;
   color: #278870;
   background-color: #99E2D0;
 }
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  .carte__tag {
-    margin-left: 12rem;
-  }
-}
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .carte__tag {
-    margin-left: 12rem;
-  }
-}
-.carte__image {
-  box-sizing: border-box;
-  border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
-}
 .carte__description {
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -336,6 +344,7 @@ h1 {
   width: 85%;
 }
 .carte-nourriture__container__description__prix {
+  padding-right: 0.5rem;
   font-family: "Roboto bold";
 }
 .carte-nourriture__container:hover + .carte-nourriture__cocher {
@@ -343,6 +352,14 @@ h1 {
 }
 .carte-nourriture__container:hover + .carte-nourriture__cocher > i {
   animation: rotation 0.25s 0.125s linear both;
+}
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .carte-nourriture__container:active + .carte-nourriture__cocher {
+    animation: cocher 0.5s ease-in-out both;
+  }
+  .carte-nourriture__container:active + .carte-nourriture__cocher > i {
+    animation: rotation 0.25s 0.125s linear both;
+  }
 }
 .carte-nourriture__cocher {
   opacity: 0;
@@ -381,6 +398,9 @@ h1 {
   background-size: cover;
 }
 
+.header {
+  position: relative;
+}
 .header__logo {
   padding: 1rem;
   display: flex;
@@ -421,9 +441,10 @@ h1 {
 .header__titre__nom {
   border-radius: 5rem 5rem 0 0;
   font-size: 3rem;
-  height: 160px;
-  position: relative;
-  top: 62%;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: -1%;
   background-color: #f6f6f6;
   margin-bottom: 0px;
   display: flex;
@@ -436,17 +457,10 @@ h1 {
     height: 100px;
     font-size: 1.7rem;
     border-radius: 2rem 2rem 0 0;
-    top: 80%;
   }
 }
 .header__titre__nom > div {
   font-family: "Shrikhand";
-}
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .header__titre__nom > div {
-    position: relative;
-    top: 5%;
-  }
 }
 .header__titre__nom i {
   padding-left: 5rem;
@@ -455,11 +469,6 @@ h1 {
   .header__titre__nom i {
     padding-left: 2.5rem;
   }
-}
-
-#background--menu1 {
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) 50% 80% no-repeat;
-  background-size: cover;
 }
 
 .section {

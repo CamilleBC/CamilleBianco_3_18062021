@@ -6,6 +6,11 @@
     &:hover{
         -webkit-text-fill-color: transparent;
     }
+    @include responsive (mobile){
+        &:active{
+            -webkit-text-fill-color: transparent;
+        }
+    }
    &-full{
     position: absolute;
     right: 0%;
@@ -19,5 +24,10 @@
     &:hover{
         opacity: 1;
     }
-   }
+    @include responsive (mobile){
+        &:active{
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    }
 }
