@@ -46,7 +46,6 @@
             align-self: center;
             background: -webkit-linear-gradient(174deg, $color-secondary 0%, $color-primary 100%);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: black;
             &:hover{
                 -webkit-text-fill-color: transparent;
             }

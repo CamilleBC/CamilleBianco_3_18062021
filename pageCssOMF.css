@@ -174,7 +174,6 @@ h1 {
   position: relative;
   background: -webkit-linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: black;
 }
 .heart:hover {
   -webkit-text-fill-color: transparent;
@@ -248,7 +247,6 @@ h1 {
   align-self: center;
   background: -webkit-linear-gradient(174deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: black;
 }
 .carte__description__coeur:hover {
   -webkit-text-fill-color: transparent;
